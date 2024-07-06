@@ -2,7 +2,7 @@ package alura.converter;
 
 import java.util.Scanner;
 
-public class Principal {
+public class Main {
     private static void menu(){
         System.out.println("**********************************************");
         System.out.println("Bienvenido al Challenge Conversor de Monedas\n");
@@ -15,7 +15,7 @@ public class Principal {
         System.out.println("6) Peso Colombiano =>> Dólar\n");
 
         System.out.println("7) Salir del programa");
-        System.out.println("-Jabesrey-");
+        System.out.println("-ELIJA UNA OPCION VALIDA-\n");
 
 
         System.out.println("**********************************************");
@@ -27,7 +27,7 @@ public class Principal {
 
             do{
                 menu();
-                var opcion = sc.nextInt();
+                int opcion = sc.nextInt();
 
                 if(opcion == 7){
                     System.out.println("Infectando Computadora... Vuelva Pronto");
@@ -35,8 +35,9 @@ public class Principal {
                     break;
                 }
                 System.out.println("Que cantidad quiere convertir?");
-                var amount = Double.valueOf(sc.nextLine());
+                double cantidad = sc.nextDouble();
 
+                new typeOfCurrency(opcion, cantidad);
 
             }while(true);
 
